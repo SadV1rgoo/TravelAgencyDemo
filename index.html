@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Agencia de Viaje</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+      <!-- Nav -->
+      <div class="navigation">
+        <nav class="nav d-flex">
+          <div class="logo">
+              <img src="img/Logo.png" />
+            </a>
+          </div>
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="#header" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#trips" class="nav-link">Viajes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#destinos" class="nav-link">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contacto</a>
+            </li>
+            
+            <li class="nav-link">
+              <span id="exchange-rate"></span>
+          </li>
+          <script>
+              // Simulación de datos obtenidos de Postman o API
+              const exchangeData = {
+                  "datos": [
+                      {
+                          "valor": "19.29",
+                          "clave": "exchange",
+                          "nombre": "Tipo de cambio"
+                      }
+                  ]
+              };
+              
+              // Mostrar el tipo de cambio en el frontend
+              document.addEventListener("DOMContentLoaded", function() {
+                  const exchangeElement = document.getElementById("exchange-rate");
+                  const exchangeValue = exchangeData.datos[0].valor;
+                  exchangeElement.innerHTML = `1 USD - ${exchangeValue} MXN`;
+              });
+              </script>
+                                  
+      </ul>
+          </ul>
+
+
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Slider -->
+      <div class="swiper-container slider-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src='https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66c67a8aacfaf.jpeg'; alt="" />
+            <div class="caption">
+              <h3>Desde el pueblo de Zacatlán</h3>
+              <p>Zacatlán de las Manzanas, Puebla</p>
+          </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src='https://nefertari.s3.us-east-2.amazonaws.com/documentos/banner/66df2922ca370.jpg'; alt="" />
+            <div class="caption">
+              <h3>A los monumentos de Dragones y Guerreros</h3>
+              <p>China</p>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='https://nefertari.s3.us-east-2.amazonaws.com/documentos/banner/66df2b814e0c4.jpeg'; alt="" />
+            <div class="caption">
+              <h3>O la puesta de sol de Halong Vietnam</h3>
+              <p>Islas de Bahía</p>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/cont.jpeg" alt="" srcset="">
+            <div class="caption">
+              <h3>¡Encontrarás el destino ideal para tí!</h3>
+          </div>
+     </div>
+          </div>
+
+
+      <div class="arrows d-flex">
+        <div class="swiper-prev d-flex">
+          <i class="bx bx-chevron-left swiper-icon"></i>
+        </div>
+        <div class="swiper-next d-flex">
+          <i class="bx bx-chevron-right swiper-icon"></i>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- About Section -->
+      <section class="section about" id="about">
+        <div class="row container">
+          <div class="col">
+            <div class="title">
+              <h1>Acerca de nosotros</h1>
+            </div>
+            <p>
+              Somos una agencia de viajes innovador que ofrece los
+              mejores paquetes en el mercado, incluyendo servicios
+              de hospedaje, iteneriarios y  trámites de pasaportes.
+            </p>
+            <a href="#contact" class="btn">¡Contáctate!</a>
+          </div>
+          <div class="col">
+            <div class="swiper-container slider-2">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                  <img src="https://nefertari.s3.us-east-2.amazonaws.com/documentos/magazine/66b54a64bdbca.jpeg" width="100%" height="600px"></iframe>
+
+                </div>
+                
+                <div class="swiper-slide">
+                  <iframe src="https://nefertari.s3.us-east-2.amazonaws.com/documentos/magazine/66b54a8b37756.pdf" width="100%" height="600px"></iframe>
+
+                </div>
+              </div>
+              <div class="swiper-button-next">
+                <i class="bx bx-chevron-right swiper-icon"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="bx bx-chevron-left swiper-icon"></i>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+          
+        <div class="content">
+          
+          <span class="video-control d-flex"></span>
+        </div>
+     
+<!-- Trip Section (el carrusel/slider)-->
+<section class="section trip" id="trips">
+  <div class="title">
+    <h1>Paquetes <br />más vendidos</h1>
+    <p>La opinión del cliente siempre es prioridad. <br> ¡Conoce los paquetes de viaje más adquiridos!</p>
+  </div>
+<div class="row container">
+  <div class="swiper-container slider-3">
+    <div class="swiper-wrapper" id="best-sellers">
+    </div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <div class="custom-next d-flex">
+    <i class="bx bx-chevron-right swiper-icon"></i>
+  </div>
+  <div class="custom-prev d-flex">
+    <i class="bx bx-chevron-left swiper-icon"></i>
+  </div>
+
+  <!-- Paginación -->
+  <div class="custom-pagination d-flex"></div>
+</div> 
+</section>
+
+      <!-- More Section -->
+      <section class="section more" id="destinos">
+        <div class="row container">
+          <div class="col">
+            <div class="title">
+              <h1>
+                Conoce los destinos <br />
+                con ofertas y los más novedosos.
+              </h1>
+              <p>
+              Paquetes de viaje que se encuentran ahora en 
+              oferta.
+              </p>
+            </div>
+            <div class="tours">
+              <div class="box">
+                <img src="https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66cc1e6151c7b.jpg" alt="" />
+                <h3>Puerto Vallarta <br> 5 días 4 noches</h3>
+                <h4>Desde $6,000</h4>
+              </div>
+              <div class="box">
+                <img src="https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66c6752ace54b.jpg" alt="" />
+                <h3>Cancun <br> 6 días 5 noches</h3>
+                <h4>Desde $10,900</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img src="https://nefertari.s3.us-east-2.amazonaws.com/documentos/flyers/66cd0caa30710.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- Contact Section -->
+      <section class="section contact" id="contact">
+        <div class="title">
+          <h1>Contáctate con nosotros</h1>
+          <p>
+            Asegurando que su viaje sea confiable y seguro, no dudes en 
+            comunicarte para llegar hacía su destino.
+          </p>
+        </div>
+
+        <div class="location container">
+          <iframe
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.996330063113!2d-99.16918592580679!3d19.412564541322396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3f6a71710f%3A0x73c2c424e1d0a02f!2sAv.%20Insurgentes%20Sur%20333%2C%20Hip%C3%B3dromo%2C%20Cuauht%C3%A9moc%2C%2006100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1728295882814!5m2!1sen!2smx"
+            width="600"
+            height="550"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row container">
+        <div class="col">
+          <h3>Agencia</h3>
+          <a href="#contact">Contactarnos</a>
+          <a href="https://api.whatsapp.com/send/?phone=525561148927">+52 556 114 8927</a>
+          <a href="paginaweb@nefertaritravel.com.mx">paginaweb@nefertaritravel.com.mx</a>
+          
+        </div>
+        <div class="col">
+          
+        </div>
+        <div class="col">
+          <h3>Se parte de GoPlaces</h3>
+
+          <a>Iteneriarios</a>
+          <a>Orientación de Expertos</a>
+          <a>Confiable</a>
+          <a>Ofertas</a>
+          <a>Hospedaje</a>
+        </div>
+        <div class="col">
+          <img src="https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66c6752ace54b.jpg" alt="" />
+          <img src="https://nefertari.s3.us-east-2.amazonaws.com/documentos/banner/66df2b814e0c4.jpeg" alt="" />
+          <img src="https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66c67b4ef3c27.jpg" alt="" />
+          <img src="https://nefertari.s3.us-east-2.amazonaws.com/paginasweb/viajes/66c6752ace54b.jpg" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <!-- SwiperJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.js"></script>
+    <!-- SCROLL REVEAL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <!-- SliderJS -->
+    <script src="js/slider.js"></script>
+    <!--Conf JS-->
+    <script src="js/conf.js"></script>
+    <!--Home.js--> 
+   <script src="js/home.js"></script>
+   <!--JQUERY-->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- IndexJS -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
